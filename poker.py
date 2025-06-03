@@ -3,6 +3,9 @@ import pygame
 
 CARD_WIDTH, CARD_HEIGHT = 60, 90  # Set desired card size
 
+pygame.init()
+WIN = pygame.display.set_mode((800, 600))
+
 def load_and_scale(filename):
     img = pygame.image.load(filename)
     return pygame.transform.scale(img, (CARD_WIDTH, CARD_HEIGHT))
@@ -116,11 +119,8 @@ cards = {
     "ace_of_spades": ace_s
 }
 
-deck = pydealer.Deck()
-deck.shuffle()
-
-pygame.init()
-WIN = pygame.display.set_mode((800, 600))
+BG = pygame.image.load("25200.jpg")
+BG = pygame.transform.scale(BG, (800, 600))
 
 BG = pygame.image.load("25200.jpg")
 BG = pygame.transform.scale(BG, (800, 600))
