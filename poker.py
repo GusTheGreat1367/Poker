@@ -125,6 +125,9 @@ BG = pygame.transform.scale(BG, (800, 600))
 BG = pygame.image.load("25200.jpg")
 BG = pygame.transform.scale(BG, (800, 600))
 
+deck = pydealer.Deck()
+deck.shuffle()
+
 def deal_cards(num_cards):
     global deck
     if len(deck) < num_cards:
