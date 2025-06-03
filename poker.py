@@ -1,58 +1,65 @@
 import pydealer 
 import pygame 
-chips = pygame.image.load("Chips.png")
-twoc = pygame.image.load("2_of_clubs.png")
-twoh = pygame.image.load("2_of_hearts.png")
-twod = pygame.image.load("2_of_diamonds.png")
-twos = pygame.image.load("2_of_spades.png")
-threec = pygame.image.load("3_of_clubs.png")
-threeh = pygame.image.load("3_of_hearts.png")
-threed = pygame.image.load("3_of_diamonds.png")
-threes = pygame.image.load("3_of_spades.png")
-fourc = pygame.image.load("4_of_clubs.png")
-fourh = pygame.image.load("4_of_hearts.png")
-fourd = pygame.image.load("4_of_diamonds.png")
-fours = pygame.image.load("4_of_spades.png")
-fivec = pygame.image.load("5_of_clubs.png")
-fiveh = pygame.image.load("5_of_hearts.png")
-fived = pygame.image.load("5_of_diamonds.png")
-fives = pygame.image.load("5_of_spades.png")
-sixc = pygame.image.load("6_of_clubs.png")
-sixh = pygame.image.load("6_of_hearts.png")
-sixd = pygame.image.load("6_of_diamonds.png")
-sixes = pygame.image.load("6_of_spades.png")
-seven_c = pygame.image.load("7_of_clubs.png")
-seven_h = pygame.image.load("7_of_hearts.png")
-seven_d = pygame.image.load("7_of_diamonds.png")
-seven_s = pygame.image.load("7_of_spades.png")
-eight_c = pygame.image.load("8_of_clubs.png")
-eight_h = pygame.image.load("8_of_hearts.png")
-eight_d = pygame.image.load("8_of_diamonds.png")
-eight_s = pygame.image.load("8_of_spades.png")
-nine_c = pygame.image.load("9_of_clubs.png")
-nine_h = pygame.image.load("9_of_hearts.png")
-nine_d = pygame.image.load("9_of_diamonds.png")
-nine_s = pygame.image.load("9_of_spades.png")
-ten_c = pygame.image.load("10_of_clubs.png")
-ten_h = pygame.image.load("10_of_hearts.png")
-ten_d = pygame.image.load("10_of_diamonds.png")
-ten_s = pygame.image.load("10_of_spades.png")
-jack_c = pygame.image.load("jack_of_clubs.png")
-jack_h = pygame.image.load("jack_of_hearts.png")
-jack_d = pygame.image.load("jack_of_diamonds.png")
-jack_s = pygame.image.load("jack_of_spades.png")
-queen_c = pygame.image.load("queen_of_clubs.png")
-queen_h = pygame.image.load("queen_of_hearts.png")
-queen_d = pygame.image.load("queen_of_diamonds.png")
-queen_s = pygame.image.load("queen_of_spades.png")
-king_c = pygame.image.load("king_of_clubs.png")
-king_h = pygame.image.load("king_of_hearts.png")
-king_d = pygame.image.load("king_of_diamonds.png")
-king_s = pygame.image.load("king_of_spades.png")
-ace_c = pygame.image.load("ace_of_clubs.png")
-ace_h = pygame.image.load("ace_of_hearts.png")
-ace_d = pygame.image.load("ace_of_diamonds.png")
-ace_s = pygame.image.load("ace_of_spades.png")
+
+CARD_WIDTH, CARD_HEIGHT = 60, 90  # Set desired card size
+
+def load_and_scale(filename):
+    img = pygame.image.load(filename)
+    return pygame.transform.scale(img, (CARD_WIDTH, CARD_HEIGHT))
+
+chips = load_and_scale("Chips.png")
+twoc = load_and_scale("2_of_clubs.png")
+twoh = load_and_scale("2_of_hearts.png")
+twod = load_and_scale("2_of_diamonds.png")
+twos = load_and_scale("2_of_spades.png")
+threec = load_and_scale("3_of_clubs.png")
+threeh = load_and_scale("3_of_hearts.png")
+threed = load_and_scale("3_of_diamonds.png")
+threes = load_and_scale("3_of_spades.png")
+fourc = load_and_scale("4_of_clubs.png")
+fourh = load_and_scale("4_of_hearts.png")
+fourd = load_and_scale("4_of_diamonds.png")
+fours = load_and_scale("4_of_spades.png")
+fivec = load_and_scale("5_of_clubs.png")
+fiveh = load_and_scale("5_of_hearts.png")
+fived = load_and_scale("5_of_diamonds.png")
+fives = load_and_scale("5_of_spades.png")
+sixc = load_and_scale("6_of_clubs.png")
+sixh = load_and_scale("6_of_hearts.png")
+sixd = load_and_scale("6_of_diamonds.png")
+sixes = load_and_scale("6_of_spades.png")
+seven_c = load_and_scale("7_of_clubs.png")
+seven_h = load_and_scale("7_of_hearts.png")
+seven_d = load_and_scale("7_of_diamonds.png")
+seven_s = load_and_scale("7_of_spades.png")
+eight_c = load_and_scale("8_of_clubs.png")
+eight_h = load_and_scale("8_of_hearts.png")
+eight_d = load_and_scale("8_of_diamonds.png")
+eight_s = load_and_scale("8_of_spades.png")
+nine_c = load_and_scale("9_of_clubs.png")
+nine_h = load_and_scale("9_of_hearts.png")
+nine_d = load_and_scale("9_of_diamonds.png")
+nine_s = load_and_scale("9_of_spades.png")
+ten_c = load_and_scale("10_of_clubs.png")
+ten_h = load_and_scale("10_of_hearts.png")
+ten_d = load_and_scale("10_of_diamonds.png")
+ten_s = load_and_scale("10_of_spades.png")
+jack_c = load_and_scale("jack_of_clubs.png")
+jack_h = load_and_scale("jack_of_hearts.png")
+jack_d = load_and_scale("jack_of_diamonds.png")
+jack_s = load_and_scale("jack_of_spades.png")
+queen_c = load_and_scale("queen_of_clubs.png")
+queen_h = load_and_scale("queen_of_hearts.png")
+queen_d = load_and_scale("queen_of_diamonds.png")
+queen_s = load_and_scale("queen_of_spades.png")
+king_c = load_and_scale("king_of_clubs.png")
+king_h = load_and_scale("king_of_hearts.png")
+king_d = load_and_scale("king_of_diamonds.png")
+king_s = load_and_scale("king_of_spades.png")
+ace_c = load_and_scale("ace_of_clubs.png")
+ace_h = load_and_scale("ace_of_hearts.png")
+ace_d = load_and_scale("ace_of_diamonds.png")
+ace_s = load_and_scale("ace_of_spades.png")
 
 cards = {
     "2_of_clubs": twoc,
@@ -100,7 +107,6 @@ cards = {
     "queen_of_diamonds": queen_d,
     "queen_of_spades": queen_s,
     "king_of_clubs": king_c,
-    "king_of_clubs": king_c,
     "king_of_hearts": king_h,
     "king_of_diamonds": king_d,
     "king_of_spades": king_s,
@@ -109,45 +115,50 @@ cards = {
     "ace_of_diamonds": ace_d,
     "ace_of_spades": ace_s
 }
+
 deck = pydealer.Deck()
 deck.shuffle()
 
-# Initialize pygame and create a window surface
 pygame.init()
-WIN = pygame.display.set_mode((800, 600))  # Set to your desired window size
+WIN = pygame.display.set_mode((800, 600))
+
+BG = pygame.image.load("25200.jpg")
+BG = pygame.transform.scale(BG, (800, 600))
 
 def deal_cards(num_cards):
+    global deck
+    if len(deck) < num_cards:
+        deck = pydealer.Deck()
+        deck.shuffle()
+    deck.shuffle()  # Shuffle before each deal for more randomness
     hand = deck.deal(num_cards)
     return hand
-BG = pygame.image.load("25200.jpg")  # Load your background image if needed
+
 def display_hand(hand):
-    x_position = 0
-    y_position = 0
+    x_position = 20
+    y_position = 400
     for card in hand:
         card_name = f"{card.value.lower()}_of_{card.suit.lower()}"
         card_image = cards.get(card_name)
         if card_image:
-            WIN.blit(card_image, (x_position, y_position))  # Replace with actual coordinates as needed
-            x_position += 80  # Move x for next card
-        print(f"Card: {card}, Image: {card_image}")  # Placeholder for actual rendering
+            WIN.blit(card_image, (x_position, y_position))
+            x_position += CARD_WIDTH + 10  # Space between cards
 
 def main():
     running = True
+    hand = deal_cards(2)
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        BG = pygame.image.load("25200.jpg")
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                hand = deal_cards(5)  # Press SPACE to deal a new hand
+
         WIN.blit(BG, (0, 0))
-        WIN.fill((0, 128, 0))  # Fill the window with a green background
-        hand = deal_cards(5)  # Deal 5 cards
-        display_hand(hand)  # Display the dealt hand
-        pygame.display.flip()  # Update the display
+        display_hand(hand)
+        pygame.display.flip()
 
-    pygame.quit()                   
-    
-    hand = deal_cards(5)  # Deal 5 cards
-    display_hand(hand)  # Display the dealt hand
-    pygame.display.flip()  # Update the display
+    pygame.quit()
 
-pygame.quit()
+if __name__ == "__main__":
+    main()
